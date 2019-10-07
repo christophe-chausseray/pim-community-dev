@@ -101,6 +101,13 @@ services:
             - '@test.catalog.product.builder'
             - '@pim_catalog.repository.product'
 
+    test.catalog.product_model_creation.context:
+        public: true
+        class: 'Akeneo\Test\Acceptance\Catalog\Context\ProductModelCreation'
+        arguments:
+            - '@pim_catalog.repository.product_model'
+            - '@pim_catalog.saver.product_model'
+
     test.catalog.product_validation.context:
         public: true
         class: 'Akeneo\Test\Acceptance\Catalog\Context\ProductValidation'
@@ -116,4 +123,3 @@ services:
             - '@pim_user.updater.user'
             - '@validator'
             - '@pim_user.repository.group'
-

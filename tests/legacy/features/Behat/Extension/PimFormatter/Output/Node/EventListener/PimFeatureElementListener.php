@@ -188,7 +188,7 @@ final class PimFeatureElementListener implements EventListener
      */
     private function markScenarioAsFailedWhenThereAreTeardownExceptions(array $stepEvents, Formatter $formatter):void
     {
-        $message = 'This scenario has an error not properly catched by behat. It is probably a JS error. Exception: "%s".';
+        $message = 'This scenario encountered an error not properly caught by behat. It is probably a JS error. Exception: "%s".';
         $failedSteps = array_filter($stepEvents, function (AfterStepTested $afterStepTested) {
             return in_array($afterStepTested->getTestResult()->getResultCode(), [TestResult::FAILED, TestResult::PENDING, StepResult::UNDEFINED]);
         });

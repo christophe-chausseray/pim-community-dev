@@ -178,9 +178,12 @@ acceptance:
             paths:
                 - '%paths.base%/tests/features/pim'
             contexts:
+                - test.attribute.context
+                - test.family.context
                 - test.catalog.product_creation.context
                 - test.catalog.product_validation.context
                 - test.enrichment.enrichment_follow_up_context
+                - test.catalog.product_model_creation.context
             filters:
                 tags: '@acceptance-back'
         channel:
